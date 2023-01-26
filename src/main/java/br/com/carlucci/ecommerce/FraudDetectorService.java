@@ -19,10 +19,10 @@ public class FraudDetectorService {
                 for (var record : records) {
                     System.out.println("----------------------------------");
                     System.out.println("Processing new Order, checkit for fraud");
-                    System.out.println(record.key());
-                    System.out.println(record.value());
-                    System.out.println(record.partition());
-                    System.out.println(record.offset());
+                    System.out.println("Chave:"+record.key());
+                    System.out.println("Valor:" +record.value());
+                    System.out.println("Particao:" +record.partition());
+                    System.out.println("Em qual offset esta lendo:" +record.offset());
                     try {
                         Thread.sleep(5000);
                     } catch (InterruptedException e) {
